@@ -24,10 +24,10 @@ def eating_cookies(n):
     # [7]
     # 5 cookies visual [1,1,1,1,1],[3,2],[2,3],[3,1,1],[1,1,3],[1,3,1],[2,2,1],[1,2,2],[2,1,2],[1,1,1,2],[2,1,1,1],[1,2,1,1],[1,1,2,1]
     # [13]
+    if n < 0:
+        return 0
     if n <= 1:
         return 1
-    if n == 2:
-        return 2
     else:
         return eating_cookies(n - 3) + eating_cookies(n - 2) + eating_cookies(n - 1)
 
